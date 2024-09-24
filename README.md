@@ -1,0 +1,1 @@
+# A rails project to put my knowledge of MVC and ruby into practice
