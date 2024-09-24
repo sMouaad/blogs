@@ -17,10 +17,10 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
-COPY config/master.key /rails/config/master.key
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
+    RAILS_MASTER_KEY="cb8e6871d762be4ce02eb4ad24f5ee52" \
     BUNDLE_WITHOUT="development"
 
 # Throw-away build stage to reduce size of final image
